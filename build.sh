@@ -11,12 +11,12 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 
 # Setup paths to stuff we need
 
-OPENSSL_VERSION="1.0.2s"
+OPENSSL_VERSION="1.1.1c"
 
 DEVELOPER=$(xcode-select --print-path)
 
 IPHONEOS_SDK_VERSION=$(xcrun --sdk iphoneos --show-sdk-version)
-IPHONEOS_DEPLOYMENT_VERSION="6.0"
+IPHONEOS_DEPLOYMENT_VERSION="8.0"
 IPHONEOS_PLATFORM=$(xcrun --sdk iphoneos --show-sdk-platform-path)
 IPHONEOS_SDK=$(xcrun --sdk iphoneos --show-sdk-path)
 
@@ -43,11 +43,11 @@ configure() {
    export CROSS_SDK="${OS}${SDK_VERSION}.sdk"
 
    if [ "$ARCH" == "x86_64" ]; then
-       ${SRC_DIR}/Configure darwin64-x86_64-cc --prefix="${BUILD_DIR}/${OPENSSL_VERSION}-${ARCH}" &> "${BUILD_DIR}/${OPENSSL_VERSION}-${ARCH}.log"
+       ${SRC_DIR}/Configure darwin64-x86_64-cc -no-engine --prefix="${BUILD_DIR}/${OPENSSL_VERSION}-${ARCH}" &> "${BUILD_DIR}/${OPENSSL_VERSION}-${ARCH}.log"
        sed -ie "s!^CFLAG=!CFLAG=-isysroot ${CROSS_TOP}/SDKs/${CROSS_SDK} -arch $ARCH -mios-simulator-version-min=${DEPLOYMENT_VERSION} -miphoneos-version-min=${DEPLOYMENT_VERSION} !" "${SRC_DIR}/Makefile"
        sed -ie "s!^CFLAGS=!CFLAGS=-isysroot ${CROSS_TOP}/SDKs/${CROSS_SDK} -arch $ARCH -mios-simulator-version-min=${DEPLOYMENT_VERSION} -miphoneos-version-min=${DEPLOYMENT_VERSION} !" "${SRC_DIR}/Makefile"
    else
-       ${SRC_DIR}/Configure iphoneos-cross -no-asm --prefix="${BUILD_DIR}/${OPENSSL_VERSION}-${ARCH}" &> "${BUILD_DIR}/${OPENSSL_VERSION}-${ARCH}.log"
+       ${SRC_DIR}/Configure iphoneos-cross -no-asm -no-engine --prefix="${BUILD_DIR}/${OPENSSL_VERSION}-${ARCH}" &> "${BUILD_DIR}/${OPENSSL_VERSION}-${ARCH}.log"
        sed -ie "s!^CFLAG=!CFLAG=-mios-simulator-version-min=${DEPLOYMENT_VERSION} -miphoneos-version-min=${DEPLOYMENT_VERSION} !" "${SRC_DIR}/Makefile"
        sed -ie "s!^CFLAGS=!CFLAGS=-mios-simulator-version-min=${DEPLOYMENT_VERSION} -miphoneos-version-min=${DEPLOYMENT_VERSION} !" "${SRC_DIR}/Makefile"
        perl -i -pe 's|static volatile sig_atomic_t intr_signal|static volatile int intr_signal|' ${SRC_DIR}/crypto/ui/ui_openssl.c
@@ -74,10 +74,6 @@ build()
    # Change dir
    cd "${SRC_DIR}"
 
-   # fix headers for Swift
-
-   sed -ie "s/BIGNUM \*I,/BIGNUM \*i,/g" ${SRC_DIR}/crypto/rsa/rsa.h
-
    if [ "$TYPE" == "ios" ]; then
       # IOS
       if [ "$ARCH" == "x86_64" ]; then
@@ -88,7 +84,7 @@ build()
    elif [ "$TYPE" == "macos" ]; then
       #OSX
       if [ "$ARCH" == "x86_64" ]; then
-         ${SRC_DIR}/Configure darwin64-x86_64-cc --prefix="${BUILD_DIR}/${OPENSSL_VERSION}-${ARCH}" &> "${BUILD_DIR}/${OPENSSL_VERSION}-${ARCH}.log"
+         ${SRC_DIR}/Configure darwin64-x86_64-cc -no-engine --prefix="${BUILD_DIR}/${OPENSSL_VERSION}-${ARCH}" &> "${BUILD_DIR}/${OPENSSL_VERSION}-${ARCH}.log"
          sed -ie "s!^CFLAG=!CFLAG=-isysroot ${SDK} -arch $ARCH -mmacosx-version-min=${OSX_DEPLOYMENT_VERSION} !" "${SRC_DIR}/Makefile"
          sed -ie "s!^CFLAGS=!CFLAGS=-isysroot ${SDK} -arch $ARCH -mmacosx-version-min=${OSX_DEPLOYMENT_VERSION} !" "${SRC_DIR}/Makefile"
       fi
