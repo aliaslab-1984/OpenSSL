@@ -1315,7 +1315,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.krzyzanowskim.OpenSSL;
 				PRODUCT_NAME = OpenSSL;
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
@@ -1496,7 +1496,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.krzyzanowskim.OpenSSL;
 				PRODUCT_NAME = OpenSSL;
 				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
