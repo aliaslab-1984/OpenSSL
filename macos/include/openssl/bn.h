@@ -11,14 +11,14 @@
 #ifndef HEADER_BN_H
 # define HEADER_BN_H
 
-# include <openssl/e_os2.h>
+# include "openssl/e_os2.h"
 # ifndef OPENSSL_NO_STDIO
 #  include <stdio.h>
 # endif
-# include <openssl/opensslconf.h>
-# include <openssl/ossl_typ.h>
-# include <openssl/crypto.h>
-# include <openssl/bnerr.h>
+# include "openssl/opensslconf.h"
+# include "openssl/ossl_typ.h"
+# include "openssl/crypto.h"
+# include "openssl/bnerr.h"
 
 #ifdef  __cplusplus
 extern "C" {
@@ -138,7 +138,8 @@ void *BN_GENCB_get_arg(BN_GENCB *cb);
  *     pkt:=2.00743*Log(2)*k*2^-k*(A+B);
  *     seclevel:=Floor(-Log(2,pkt));
  *     if seclevel ge securitybits then
- *       printf "k: %5o, security: %o bits  (t: %o, M: %o)\n",k,seclevel,t,M;
+ *       printf "k: %5o, security: %o bits  (t: %o, M: %o)
+",k,seclevel,t,M;
  *       break;
  *     end if;
  *   end for;
@@ -238,7 +239,7 @@ int BN_sqr(BIGNUM *r, const BIGNUM *a, BN_CTX *ctx);
 void BN_set_negative(BIGNUM *b, int n);
 /** BN_is_negative returns 1 if the BIGNUM is negative
  * \param  b  pointer to the BIGNUM object
- * \return 1 if a < 0 and 0 otherwise
+ * eturn 1 if a < 0 and 0 otherwise
  */
 int BN_is_negative(const BIGNUM *b);
 

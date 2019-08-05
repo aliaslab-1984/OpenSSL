@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,7 +32,6 @@
 		9F4A26C8223BD8DB005CB63A /* conf.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4A267D223BD8D5005CB63A /* conf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F4A26C9223BD8DB005CB63A /* seed.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4A267E223BD8D5005CB63A /* seed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F4A26CA223BD8DB005CB63A /* srp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4A267F223BD8D6005CB63A /* srp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F4A26CC223BD8DB005CB63A /* asn1_mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4A2681223BD8D6005CB63A /* asn1_mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F4A26CD223BD8DB005CB63A /* comp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4A2682223BD8D6005CB63A /* comp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F4A26CE223BD8DB005CB63A /* ossl_typ.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4A2683223BD8D6005CB63A /* ossl_typ.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F4A26CF223BD8DB005CB63A /* ripemd.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4A2684223BD8D6005CB63A /* ripemd.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -141,7 +140,6 @@
 		9F4A27AB223BE55A005CB63A /* pem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4A2760223BE559005CB63A /* pem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F4A27AC223BE55A005CB63A /* ssl2.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4A2761223BE559005CB63A /* ssl2.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F4A27AD223BE55A005CB63A /* cast.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4A2762223BE559005CB63A /* cast.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F4A27AF223BE55B005CB63A /* asn1_mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4A2764223BE559005CB63A /* asn1_mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F4A27B0223BE55B005CB63A /* rand.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4A2765223BE559005CB63A /* rand.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F4A27B1223BE55B005CB63A /* stack.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4A2766223BE559005CB63A /* stack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F4A27B2223BE55B005CB63A /* idea.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4A2767223BE559005CB63A /* idea.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -185,7 +183,6 @@
 		9F4A267D223BD8D5005CB63A /* conf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = conf.h; path = ios/include/openssl/conf.h; sourceTree = "<group>"; };
 		9F4A267E223BD8D5005CB63A /* seed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = seed.h; path = ios/include/openssl/seed.h; sourceTree = "<group>"; };
 		9F4A267F223BD8D6005CB63A /* srp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = srp.h; path = ios/include/openssl/srp.h; sourceTree = "<group>"; };
-		9F4A2681223BD8D6005CB63A /* asn1_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = asn1_mac.h; path = ios/include/openssl/asn1_mac.h; sourceTree = "<group>"; };
 		9F4A2682223BD8D6005CB63A /* comp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = comp.h; path = ios/include/openssl/comp.h; sourceTree = "<group>"; };
 		9F4A2683223BD8D6005CB63A /* ossl_typ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ossl_typ.h; path = ios/include/openssl/ossl_typ.h; sourceTree = "<group>"; };
 		9F4A2684223BD8D6005CB63A /* ripemd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ripemd.h; path = ios/include/openssl/ripemd.h; sourceTree = "<group>"; };
@@ -297,7 +294,6 @@
 		9F4A2760223BE559005CB63A /* pem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pem.h; path = macos/include/openssl/pem.h; sourceTree = "<group>"; };
 		9F4A2761223BE559005CB63A /* ssl2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ssl2.h; path = macos/include/openssl/ssl2.h; sourceTree = "<group>"; };
 		9F4A2762223BE559005CB63A /* cast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cast.h; path = macos/include/openssl/cast.h; sourceTree = "<group>"; };
-		9F4A2764223BE559005CB63A /* asn1_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = asn1_mac.h; path = macos/include/openssl/asn1_mac.h; sourceTree = "<group>"; };
 		9F4A2765223BE559005CB63A /* rand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rand.h; path = macos/include/openssl/rand.h; sourceTree = "<group>"; };
 		9F4A2766223BE559005CB63A /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stack.h; path = macos/include/openssl/stack.h; sourceTree = "<group>"; };
 		9F4A2767223BE559005CB63A /* idea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = idea.h; path = macos/include/openssl/idea.h; sourceTree = "<group>"; };
@@ -370,7 +366,6 @@
 			children = (
 				75F1C98E22BE881200F44E23 /* shim.h */,
 				9F4A266F223BD8D5005CB63A /* aes.h */,
-				9F4A2681223BD8D6005CB63A /* asn1_mac.h */,
 				9F4A2693223BD8D7005CB63A /* asn1.h */,
 				9F4A26AD223BD8DA005CB63A /* asn1t.h */,
 				9F4A2676223BD8D5005CB63A /* bio.h */,
@@ -479,7 +474,6 @@
 			children = (
 				75F1C98B22BE87E600F44E23 /* shim.h */,
 				9F4A2768223BE559005CB63A /* aes.h */,
-				9F4A2764223BE559005CB63A /* asn1_mac.h */,
 				9F4A275B223BE558005CB63A /* asn1.h */,
 				9F4A274F223BE557005CB63A /* asn1t.h */,
 				9F4A2770223BE55A005CB63A /* bio.h */,
@@ -576,7 +570,6 @@
 				9F4A26BC223BD8DB005CB63A /* stack.h in Headers */,
 				9F4A26D7223BD8DB005CB63A /* objects.h in Headers */,
 				9F4A26BA223BD8DB005CB63A /* aes.h in Headers */,
-				9F4A26CC223BD8DB005CB63A /* asn1_mac.h in Headers */,
 				9F4A26FF223BD8DB005CB63A /* ecdsa.h in Headers */,
 				9F4A26F6223BD8DB005CB63A /* whrlpool.h in Headers */,
 				9F4A26F4223BD8DB005CB63A /* pem.h in Headers */,
@@ -674,7 +667,6 @@
 				9F4A2783223BE55A005CB63A /* ssl.h in Headers */,
 				9F4A2775223BE55A005CB63A /* conf.h in Headers */,
 				9F4A277E223BE55A005CB63A /* e_os2.h in Headers */,
-				9F4A27AF223BE55B005CB63A /* asn1_mac.h in Headers */,
 				9F4A277D223BE55A005CB63A /* srtp.h in Headers */,
 				9F4A27A4223BE55A005CB63A /* bn.h in Headers */,
 				9F4A2793223BE55A005CB63A /* evp.h in Headers */,
@@ -720,6 +712,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F4A2661223BD82B005CB63A /* Build configuration list for PBXNativeTarget "OpenSSL (iOS)" */;
 			buildPhases = (
+				6BC33B8822F85C980066067C /* Fix OpenSSL Includes */,
 				9F4A2657223BD82B005CB63A /* Headers */,
 				9F4A270F223BDA9B005CB63A /* Sources */,
 				9F4A2659223BD82B005CB63A /* Frameworks */,
@@ -738,6 +731,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F4A271D223BE477005CB63A /* Build configuration list for PBXNativeTarget "OpenSSL (macOS)" */;
 			buildPhases = (
+				6BC33B8922F862FA0066067C /* Fix OpenSSL includes */,
 				9F4A2711223BE476005CB63A /* Headers */,
 				9F4A2712223BE476005CB63A /* Sources */,
 				9F4A2713223BE476005CB63A /* Frameworks */,
@@ -802,6 +796,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6BC33B8822F85C980066067C /* Fix OpenSSL Includes */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/ios/headers.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "Fix OpenSSL Includes";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${SRCROOT}/fix_includes.sh \"${SCRIPT_INPUT_FILE_LIST_0}\"\n";
+		};
+		6BC33B8922F862FA0066067C /* Fix OpenSSL includes */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/macos/headers.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "Fix OpenSSL includes";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${SRCROOT}/fix_includes.sh \"${SCRIPT_INPUT_FILE_LIST_0}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9F4A270F223BDA9B005CB63A /* Sources */ = {

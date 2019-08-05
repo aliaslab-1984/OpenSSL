@@ -11,10 +11,10 @@
 #ifndef HEADER_SSL3_H
 # define HEADER_SSL3_H
 
-# include <openssl/comp.h>
-# include <openssl/buffer.h>
-# include <openssl/evp.h>
-# include <openssl/ssl.h>
+# include "openssl/comp.h"
+# include "openssl/buffer.h"
+# include "openssl/evp.h"
+# include "openssl/ssl.h"
 
 #ifdef  __cplusplus
 extern "C" {
@@ -203,8 +203,8 @@ extern "C" {
 # define SSL3_RT_MAX_PACKET_SIZE         \
             (SSL3_RT_MAX_ENCRYPTED_LENGTH+SSL3_RT_HEADER_LENGTH)
 
-# define SSL3_MD_CLIENT_FINISHED_CONST   "\x43\x4C\x4E\x54"
-# define SSL3_MD_SERVER_FINISHED_CONST   "\x53\x52\x56\x52"
+# define SSL3_MD_CLIENT_FINISHED_CONST   "CLNT"
+# define SSL3_MD_SERVER_FINISHED_CONST   "SRVR"
 
 # define SSL3_VERSION                    0x0300
 # define SSL3_VERSION_MAJOR              0x03

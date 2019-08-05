@@ -15,7 +15,7 @@
 extern "C"
 # endif
 
-# include <openssl/symhacks.h>
+# include "openssl/symhacks.h"
 
 int ERR_load_CRYPTO_strings(void);
 
