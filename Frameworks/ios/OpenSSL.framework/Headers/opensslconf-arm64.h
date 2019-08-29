@@ -10,7 +10,7 @@
  * https://www.openssl.org/source/license.html
  */
 
-#include <openssl/opensslv.h>
+#include "openssl/opensslv.h"
 
 #ifdef  __cplusplus
 extern "C" {
@@ -27,11 +27,39 @@ extern "C" {
 #ifndef OPENSSL_SYS_iOS
 # define OPENSSL_SYS_iOS 1
 #endif
+#define OPENSSL_MIN_API 0x10100000L
+#ifndef OPENSSL_NO_CAMELLIA
+# define OPENSSL_NO_CAMELLIA
+#endif
+#ifndef OPENSSL_NO_DES
+# define OPENSSL_NO_DES
+#endif
+#ifndef OPENSSL_NO_DSA
+# define OPENSSL_NO_DSA
+#endif
 #ifndef OPENSSL_NO_MD2
 # define OPENSSL_NO_MD2
 #endif
+#ifndef OPENSSL_NO_MD4
+# define OPENSSL_NO_MD4
+#endif
+#ifndef OPENSSL_NO_MDC2
+# define OPENSSL_NO_MDC2
+#endif
+#ifndef OPENSSL_NO_RC2
+# define OPENSSL_NO_RC2
+#endif
+#ifndef OPENSSL_NO_RC4
+# define OPENSSL_NO_RC4
+#endif
 #ifndef OPENSSL_NO_RC5
 # define OPENSSL_NO_RC5
+#endif
+#ifndef OPENSSL_NO_TS
+# define OPENSSL_NO_TS
+#endif
+#ifndef OPENSSL_NO_WHIRLPOOL
+# define OPENSSL_NO_WHIRLPOOL
 #endif
 #ifndef OPENSSL_THREADS
 # define OPENSSL_THREADS
@@ -42,6 +70,9 @@ extern "C" {
 #ifndef OPENSSL_NO_AFALGENG
 # define OPENSSL_NO_AFALGENG
 #endif
+#ifndef OPENSSL_NO_APPS
+# define OPENSSL_NO_APPS
+#endif
 #ifndef OPENSSL_NO_ASAN
 # define OPENSSL_NO_ASAN
 #endif
@@ -51,17 +82,29 @@ extern "C" {
 #ifndef OPENSSL_NO_ASYNC
 # define OPENSSL_NO_ASYNC
 #endif
+#ifndef OPENSSL_NO_CAPIENG
+# define OPENSSL_NO_CAPIENG
+#endif
 #ifndef OPENSSL_NO_CRYPTO_MDEBUG
 # define OPENSSL_NO_CRYPTO_MDEBUG
 #endif
 #ifndef OPENSSL_NO_CRYPTO_MDEBUG_BACKTRACE
 # define OPENSSL_NO_CRYPTO_MDEBUG_BACKTRACE
 #endif
+#ifndef OPENSSL_NO_DEPRECATED
+# define OPENSSL_NO_DEPRECATED
+#endif
 #ifndef OPENSSL_NO_DEVCRYPTOENG
 # define OPENSSL_NO_DEVCRYPTOENG
 #endif
+#ifndef OPENSSL_NO_DTLS1
+# define OPENSSL_NO_DTLS1
+#endif
 #ifndef OPENSSL_NO_EC_NISTP_64_GCC_128
 # define OPENSSL_NO_EC_NISTP_64_GCC_128
+#endif
+#ifndef OPENSSL_NO_ECDSA
+# define OPENSSL_NO_ECDSA
 #endif
 #ifndef OPENSSL_NO_EGD
 # define OPENSSL_NO_EGD
@@ -84,6 +127,12 @@ extern "C" {
 #ifndef OPENSSL_NO_MSAN
 # define OPENSSL_NO_MSAN
 #endif
+#ifndef OPENSSL_NO_PSK
+# define OPENSSL_NO_PSK
+#endif
+#ifndef OPENSSL_NO_RDRAND
+# define OPENSSL_NO_RDRAND
+#endif
 #ifndef OPENSSL_NO_SCTP
 # define OPENSSL_NO_SCTP
 #endif
@@ -95,6 +144,27 @@ extern "C" {
 #endif
 #ifndef OPENSSL_NO_SSL3_METHOD
 # define OPENSSL_NO_SSL3_METHOD
+#endif
+#ifndef OPENSSL_NO_STDIO
+# define OPENSSL_NO_STDIO
+#endif
+#ifndef OPENSSL_NO_TESTS
+# define OPENSSL_NO_TESTS
+#endif
+#ifndef OPENSSL_NO_TLS
+# define OPENSSL_NO_TLS
+#endif
+#ifndef OPENSSL_NO_TLS1
+# define OPENSSL_NO_TLS1
+#endif
+#ifndef OPENSSL_NO_TLS1_1
+# define OPENSSL_NO_TLS1_1
+#endif
+#ifndef OPENSSL_NO_TLS1_2
+# define OPENSSL_NO_TLS1_2
+#endif
+#ifndef OPENSSL_NO_TLS1_3
+# define OPENSSL_NO_TLS1_3
 #endif
 #ifndef OPENSSL_NO_UBSAN
 # define OPENSSL_NO_UBSAN
