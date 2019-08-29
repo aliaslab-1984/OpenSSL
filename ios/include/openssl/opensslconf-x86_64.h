@@ -28,8 +28,14 @@ extern "C" {
 # define OPENSSL_SYS_MACOSX 1
 #endif
 #define OPENSSL_MIN_API 0x10100000L
+#ifndef OPENSSL_NO_BLAKE2
+# define OPENSSL_NO_BLAKE2
+#endif
 #ifndef OPENSSL_NO_CAMELLIA
 # define OPENSSL_NO_CAMELLIA
+#endif
+#ifndef OPENSSL_NO_CHACHA
+# define OPENSSL_NO_CHACHA
 #endif
 #ifndef OPENSSL_NO_DES
 # define OPENSSL_NO_DES
@@ -45,6 +51,9 @@ extern "C" {
 #endif
 #ifndef OPENSSL_NO_MDC2
 # define OPENSSL_NO_MDC2
+#endif
+#ifndef OPENSSL_NO_POLY1305
+# define OPENSSL_NO_POLY1305
 #endif
 #ifndef OPENSSL_NO_RC2
 # define OPENSSL_NO_RC2
@@ -94,8 +103,17 @@ extern "C" {
 #ifndef OPENSSL_NO_DEVCRYPTOENG
 # define OPENSSL_NO_DEVCRYPTOENG
 #endif
+#ifndef OPENSSL_NO_DGRAM
+# define OPENSSL_NO_DGRAM
+#endif
+#ifndef OPENSSL_NO_DTLS
+# define OPENSSL_NO_DTLS
+#endif
 #ifndef OPENSSL_NO_DTLS1
 # define OPENSSL_NO_DTLS1
+#endif
+#ifndef OPENSSL_NO_DTLS1_2
+# define OPENSSL_NO_DTLS1_2
 #endif
 #ifndef OPENSSL_NO_EC_NISTP_64_GCC_128
 # define OPENSSL_NO_EC_NISTP_64_GCC_128
@@ -132,6 +150,9 @@ extern "C" {
 #endif
 #ifndef OPENSSL_NO_SCTP
 # define OPENSSL_NO_SCTP
+#endif
+#ifndef OPENSSL_NO_SOCK
+# define OPENSSL_NO_SOCK
 #endif
 #ifndef OPENSSL_NO_SSL_TRACE
 # define OPENSSL_NO_SSL_TRACE

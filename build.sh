@@ -42,7 +42,7 @@ configure() {
    export CROSS_TOP="${PLATFORM}/Developer"
    export CROSS_SDK="${OS}${SDK_VERSION}.sdk"
 
-   CONF_OPTIONS="-DOPENSSL_NO_ASYNC -no-async"
+   CONF_OPTIONS="-DOPENSSL_NO_ASYNC -no-async -no-blake2 -no-chacha -no-camellia -no-capieng -no-deprecated -no-des -no-dsa -no-dtls1 -no-ecdsa -no-md2 -no-md4 -no-poly1305 -no-psk -no-rc2 -no-rc4 -no-rc5 -no-rdrand -no-sctp -no-ssl -no-sock -no-stdio -no-tls -no-ts -no-whirlpool"
 
    if [ "$ARCH" == "x86_64" ]; then
        ${SRC_DIR}/Configure darwin64-x86_64-cc -no-engine $CONF_OPTIONS --prefix="${BUILD_DIR}/${OPENSSL_VERSION}-${ARCH}" &> "${BUILD_DIR}/${OPENSSL_VERSION}-${ARCH}.log"
