@@ -1095,7 +1095,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${SRCROOT}/fix_includes.sh \"${SCRIPT_INPUT_FILE_LIST_0}\"\n";
+			shellScript = "\"${SRCROOT}/fix_includes.sh\" \"${SCRIPT_INPUT_FILE_LIST_0}\"\n";
 		};
 		6BC33B8922F862FA0066067C /* Fix OpenSSL includes */ = {
 			isa = PBXShellScriptBuildPhase;
